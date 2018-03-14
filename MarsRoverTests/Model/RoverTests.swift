@@ -56,8 +56,24 @@ class RoverTests: XCTestCase {
     }
 
     func testOneRightSetsDirectionToEast() {
-        sut.execute(commands: "R")
+        executeAndVerifyDirection(commands: "R", expectedDirection: "E")
+    }
 
-        XCTAssertEqual("E", sut.direction)
+    func testTwoRightSetsDirectionToSouth() {
+        executeAndVerifyDirection(commands: "RR", expectedDirection: "S")
+    }
+
+    func testThreeRightSetsDirectionToWest() {
+        executeAndVerifyDirection(commands: "RRR", expectedDirection: "W")
+    }
+
+    func testFourRightSetsDirectionToNorth() {
+        executeAndVerifyDirection(commands: "RRRR", expectedDirection: "N")
+    }
+
+    private func executeAndVerifyDirection(commands: String, expectedDirection: Character) {
+        sut.execute(commands: commands)
+
+        XCTAssertEqual(expectedDirection, sut.direction)
     }
 }
