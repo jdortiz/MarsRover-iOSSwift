@@ -10,16 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: -  Properties
+    private var rover: Rover!
+    @IBOutlet weak var commandsTextField: UITextField!
+    @IBOutlet weak var positionLabel: UILabel!
+
+    // MARK: - Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        rover = Rover(x: 0, y: 0, direction: "N")
     }
 
 
+    // MARK: - UI actions
+
+    @IBAction func moveRoverButtonTapped(_ sender: UIButton) {
+        let commands = commandsTextField.text ?? ""
+        rover.execute(commands: commands)
+        positionLabel.text = rover.description
+    }
 }
 

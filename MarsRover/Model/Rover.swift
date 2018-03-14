@@ -20,9 +20,12 @@
 import Foundation
 
 
-class Rover {
+class Rover: CustomStringConvertible {
     var x, y: Int
     var direction: Character
+    var description: String {
+        return "(\(x), \(y), \(direction))"
+    }
 
     init(x: Int, y: Int, direction: Character) {
         self.x = x
