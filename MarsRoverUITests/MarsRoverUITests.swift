@@ -28,9 +28,17 @@ class MarsRoverUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testUserInputRRPrintsPositionOriginSouth() {
+
+        let app = XCUIApplication()
+        let commandsTextField = app.textFields["CommandsTextField"]
+        let positionLabel = app/*@START_MENU_TOKEN@*/.staticTexts["PositionLabel"]/*[[".staticTexts[\"(0, 0, S)\"]",".staticTexts[\"PositionLabel\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+
+        commandsTextField.tap()
+        commandsTextField.typeText("RR\n")
+        app/*@START_MENU_TOKEN@*/.buttons["ExecuteButton"]/*[[".buttons[\"Move Rover\"]",".buttons[\"ExecuteButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+
+        XCTAssertEqual("(0, 0, S)", positionLabel.label)
     }
     
 }
