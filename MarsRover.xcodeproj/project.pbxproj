@@ -14,6 +14,7 @@
 		CF34721E2059742E00D68AC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF34721C2059742E00D68AC5 /* LaunchScreen.storyboard */; };
 		CF3472292059742E00D68AC5 /* MarsRoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3472282059742E00D68AC5 /* MarsRoverTests.swift */; };
 		CF3472342059742E00D68AC5 /* MarsRoverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3472332059742E00D68AC5 /* MarsRoverUITests.swift */; };
+		CFCB81BB20597A9B00CEB1CE /* Rover.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCB81BA20597A9B00CEB1CE /* Rover.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		CF34722F2059742E00D68AC5 /* MarsRoverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarsRoverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF3472332059742E00D68AC5 /* MarsRoverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverUITests.swift; sourceTree = "<group>"; };
 		CF3472352059742E00D68AC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFCB81BA20597A9B00CEB1CE /* Rover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rover.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		CF3472122059742E00D68AC5 /* MarsRover */ = {
 			isa = PBXGroup;
 			children = (
+				CF3472412059745C00D68AC5 /* Model */,
 				CF3472132059742E00D68AC5 /* AppDelegate.swift */,
 				CF3472152059742E00D68AC5 /* ViewController.swift */,
 				CF3472172059742E00D68AC5 /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				CF3472352059742E00D68AC5 /* Info.plist */,
 			);
 			path = MarsRoverUITests;
+			sourceTree = "<group>";
+		};
+		CF3472412059745C00D68AC5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFCB81BA20597A9B00CEB1CE /* Rover.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF3472162059742E00D68AC5 /* ViewController.swift in Sources */,
+				CFCB81BB20597A9B00CEB1CE /* Rover.swift in Sources */,
 				CF3472142059742E00D68AC5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
