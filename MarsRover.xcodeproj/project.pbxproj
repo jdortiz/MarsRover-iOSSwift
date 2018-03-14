@@ -12,9 +12,9 @@
 		CF3472192059742E00D68AC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF3472172059742E00D68AC5 /* Main.storyboard */; };
 		CF34721B2059742E00D68AC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF34721A2059742E00D68AC5 /* Assets.xcassets */; };
 		CF34721E2059742E00D68AC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF34721C2059742E00D68AC5 /* LaunchScreen.storyboard */; };
-		CF3472292059742E00D68AC5 /* MarsRoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3472282059742E00D68AC5 /* MarsRoverTests.swift */; };
 		CF3472342059742E00D68AC5 /* MarsRoverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3472332059742E00D68AC5 /* MarsRoverUITests.swift */; };
 		CFCB81BB20597A9B00CEB1CE /* Rover.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCB81BA20597A9B00CEB1CE /* Rover.swift */; };
+		CFCB81BF2059A5DD00CEB1CE /* RoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCB81BE2059A5DD00CEB1CE /* RoverTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,12 +43,13 @@
 		CF34721D2059742E00D68AC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF34721F2059742E00D68AC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF3472242059742E00D68AC5 /* MarsRoverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarsRoverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF3472282059742E00D68AC5 /* MarsRoverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverTests.swift; sourceTree = "<group>"; };
 		CF34722A2059742E00D68AC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF34722F2059742E00D68AC5 /* MarsRoverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarsRoverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF3472332059742E00D68AC5 /* MarsRoverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverUITests.swift; sourceTree = "<group>"; };
 		CF3472352059742E00D68AC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFCB81BA20597A9B00CEB1CE /* Rover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rover.swift; sourceTree = "<group>"; };
+		CFCB81BD2059A5DC00CEB1CE /* MarsRoverTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MarsRoverTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		CFCB81BE2059A5DD00CEB1CE /* RoverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +114,7 @@
 		CF3472272059742E00D68AC5 /* MarsRoverTests */ = {
 			isa = PBXGroup;
 			children = (
-				CF3472282059742E00D68AC5 /* MarsRoverTests.swift */,
+				CFCB81BC2059A5A300CEB1CE /* Model */,
 				CF34722A2059742E00D68AC5 /* Info.plist */,
 			);
 			path = MarsRoverTests;
@@ -132,6 +133,15 @@
 			isa = PBXGroup;
 			children = (
 				CFCB81BA20597A9B00CEB1CE /* Rover.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CFCB81BC2059A5A300CEB1CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFCB81BE2059A5DD00CEB1CE /* RoverTests.swift */,
+				CFCB81BD2059A5DC00CEB1CE /* MarsRoverTests-Bridging-Header.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,6 +218,7 @@
 					};
 					CF3472232059742E00D68AC5 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = CF34720F2059742E00D68AC5;
 					};
@@ -280,7 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF3472292059742E00D68AC5 /* MarsRoverTests.swift in Sources */,
+				CFCB81BF2059A5DD00CEB1CE /* RoverTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,12 +480,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 324YCFLY7B;
 				INFOPLIST_FILE = MarsRoverTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.canonicalexamples.MarsRoverTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MarsRoverTests/Model/MarsRoverTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarsRover.app/MarsRover";
@@ -486,12 +500,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 324YCFLY7B;
 				INFOPLIST_FILE = MarsRoverTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.canonicalexamples.MarsRoverTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MarsRoverTests/Model/MarsRoverTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarsRover.app/MarsRover";
