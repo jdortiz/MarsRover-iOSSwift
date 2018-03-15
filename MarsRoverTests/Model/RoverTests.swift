@@ -20,7 +20,6 @@
 import XCTest
 @testable import MarsRover
 
-
 class RoverTests: XCTestCase {
 
     // MARK: - Parameters & Constants.
@@ -28,11 +27,9 @@ class RoverTests: XCTestCase {
     let initialY = 0
     let initialDirection: Character = "N"
 
-
     // MARK: - Test vatiables.
 
     var sut: Rover!
-
 
     // MARK: - Set up and tear down.
 
@@ -47,7 +44,6 @@ class RoverTests: XCTestCase {
 
         super.tearDown()
     }
-
 
     // MARK: - Basic test.
 

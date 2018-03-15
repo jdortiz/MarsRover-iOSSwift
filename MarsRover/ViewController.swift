@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    // MARK: -  Properties
+    // MARK: - Properties
+
     private var rover: Rover!
     @IBOutlet weak var commandsTextField: UITextField!
     @IBOutlet weak var positionLabel: UILabel!
@@ -21,7 +22,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         rover = Rover(x: 0, y: 0, direction: "N")
     }
-
 
     // MARK: - UI actions
 

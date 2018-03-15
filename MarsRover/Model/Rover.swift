@@ -19,15 +19,18 @@
 
 import Foundation
 
-
 class Rover: CustomStringConvertible {
+    // swiftlint:disable identifier_name
     var x, y: Int
+    // swiftlint:enable identifier_name
     var direction: Character
     var description: String {
         return "(\(x), \(y), \(direction))"
     }
 
+    // swiftlint:disable identifier_name
     init(x: Int, y: Int, direction: Character) {
+        // swiftlint:enable identifier_name
         self.x = x
         self.y = y
         self.direction = direction
